@@ -1,17 +1,25 @@
 package br.edu.ifce.engenharia.software.mvvm;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ViewModel {
-    private View view;
+    private List<TextAreaEntity> textAreaEntitiesList;
+    private List<TextFieldEntity> textFieldEntitiesList;
     private Model model;
     private boolean flag;
 
     public ViewModel() {
-        flag = true;
+        this.textAreaEntitiesList = new ArrayList();
+        this.textFieldEntitiesList = new ArrayList<>();
+        this.flag = true;
     }
 
-    public void bindView(View view){
-        this.view = view;
-        this.view.setViewModel(this);
+    public void bindEntity(Object object){
+        if (object.getClass().getSimpleName().equals("TextAreaEntity"))
+            this.textAreaEntitiesList.add((TextAreaEntity) object);
+        if (object.getClass().getSimpleName().equals("TextFieldEntity"))
+            this.textFieldEntitiesList.add((TextFieldEntity) object);
     }
 
     public void bindModel(Model model){
@@ -28,7 +36,7 @@ public class ViewModel {
 
     public void update(){
         final String nome = this.model.getNome();
-        this.view.updateView(nome);
+        this.textAreaEntitiesList.get(0).println("Olá "+nome+"\n\n");
     }
 
     public boolean getFlag() {

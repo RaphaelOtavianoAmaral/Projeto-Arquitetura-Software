@@ -1,40 +1,38 @@
 package br.edu.ifce.engenharia.software.mvvm;
 
-import java.util.Scanner;
+
 
 public class View {
-    private Scanner scanner;
+    private TextAreaEntity textAreaEntity;
+    private TextFieldEntity textFieldEntity;
     private ViewModel viewModel;
 
     public View() {
-        this.scanner = new Scanner(System.in);
+        this.textFieldEntity = TextFieldEntity.textFieldEntityFactory();
+        this.textAreaEntity = TextAreaEntity.textAreaEntityFactory();
     }
 
-
-    public void updateView(String nome) {
-        this.display(nome);
+    private void bindEntities(){
+        this.viewModel.bindEntity(textAreaEntity);
+        this.viewModel.bindEntity(textFieldEntity);
     }
 
     public void displayPromptText(){
-        System.out.println("Digite seu nome: ");
+        this.textAreaEntity.println("Digite seu nome: ");
     }
 
     public void handleEvent(){
-        String input = scanner.nextLine();
+        String input = this.textFieldEntity.getText();
         if(input.matches("[a-zA-Z]+")){
             this.viewModel.processEvent(input);
         }else{
-            System.out.println("Erro, entrada inválida! Digite algo...\n\n\n");
+            this.textAreaEntity.println("Erro, entrada inválida! Digite algo...\n\n\n");
         }
-    }
-
-    private void display(String nome){
-        System.out.println("Olá "+nome+"\n\n");
     }
 
     public void setViewModel(ViewModel viewModel) {
         this.viewModel = viewModel;
+        this.bindEntities();
     }
-
 
 }

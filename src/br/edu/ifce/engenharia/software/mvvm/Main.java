@@ -9,11 +9,14 @@ public class Main {
         ViewModel viewModel = new ViewModel();
 
         viewModel.bindModel(model);
-        viewModel.bindView(view);
+        view.setViewModel(viewModel);
+
 
         do{
             view.displayPromptText();
             view.handleEvent();
         }while (viewModel.getFlag());
+
+
     }
 }
