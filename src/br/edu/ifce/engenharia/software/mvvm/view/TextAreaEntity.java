@@ -1,4 +1,4 @@
-package br.edu.ifce.engenharia.software.mvvm;
+package br.edu.ifce.engenharia.software.mvvm.view;
 
 public class TextAreaEntity {
 

@@ -1,4 +1,6 @@
-package br.edu.ifce.engenharia.software.mvvm;
+package br.edu.ifce.engenharia.software.mvvm.model;
+
+import br.edu.ifce.engenharia.software.mvvm.viewmodel.ViewModel;
 
 public class Model {
     private String nome;

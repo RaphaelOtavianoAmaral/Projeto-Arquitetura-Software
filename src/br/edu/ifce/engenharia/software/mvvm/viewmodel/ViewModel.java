@@ -1,4 +1,8 @@
-package br.edu.ifce.engenharia.software.mvvm;
+package br.edu.ifce.engenharia.software.mvvm.viewmodel;
+
+import br.edu.ifce.engenharia.software.mvvm.model.Model;
+import br.edu.ifce.engenharia.software.mvvm.view.TextAreaEntity;
+import br.edu.ifce.engenharia.software.mvvm.view.TextFieldEntity;
 
 import java.util.ArrayList;
 import java.util.List;

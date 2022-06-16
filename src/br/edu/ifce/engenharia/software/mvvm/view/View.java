@@ -1,6 +1,7 @@
-package br.edu.ifce.engenharia.software.mvvm;
+package br.edu.ifce.engenharia.software.mvvm.view;
 
 
+import br.edu.ifce.engenharia.software.mvvm.viewmodel.ViewModel;
 
 public class View {
     private TextAreaEntity textAreaEntity;

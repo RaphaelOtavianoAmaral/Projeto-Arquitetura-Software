@@ -1,5 +1,9 @@
 package br.edu.ifce.engenharia.software.mvvm;
 
+import br.edu.ifce.engenharia.software.mvvm.model.Model;
+import br.edu.ifce.engenharia.software.mvvm.view.View;
+import br.edu.ifce.engenharia.software.mvvm.viewmodel.ViewModel;
+
 public class Main {
 
 
