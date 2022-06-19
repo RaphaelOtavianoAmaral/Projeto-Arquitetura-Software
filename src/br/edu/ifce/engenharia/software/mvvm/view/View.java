@@ -1,6 +1,5 @@
 package br.edu.ifce.engenharia.software.mvvm.view;
 
-
 import br.edu.ifce.engenharia.software.mvvm.viewmodel.ViewModel;
 
 public class View {
