@@ -13,7 +13,7 @@ public class ViewModel {
     private boolean flag;
 
     public ViewModel() {
-        this.textAreaEntitiesList = new ArrayList();
+        this.textAreaEntitiesList = new ArrayList<>();
         this.textFieldEntitiesList = new ArrayList<>();
         this.flag = true;
     }
@@ -45,4 +45,9 @@ public class ViewModel {
     public boolean getFlag() {
         return flag;
     }
+
+    public static ViewModel viewModelFactory(){
+        return new ViewModel();
+    }
+
 }

@@ -35,4 +35,8 @@ public class View {
         this.bindEntities();
     }
 
+    public static View viewFactory(){
+        return new View();
+    }
+
 }

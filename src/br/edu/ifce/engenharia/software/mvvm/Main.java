@@ -9,9 +9,9 @@ public class Main {
 
     public static void main(String[] args) {
         System.out.println("EXEMPLO MVVM");
-        View view = new View();
-        Model model = new Model();
-        ViewModel viewModel = new ViewModel();
+        View view = View.viewFactory();
+        Model model = Model.modelFactory();
+        ViewModel viewModel = ViewModel.viewModelFactory();
 
         viewModel.bindModel(model);
         view.setViewModel(viewModel);

@@ -25,4 +25,9 @@ public class Model {
     public void setViewModel(ViewModel viewModel) {
         this.viewModel = viewModel;
     }
+
+    public static Model modelFactory(){
+        return new Model();
+    }
+
 }
